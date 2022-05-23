@@ -8,11 +8,17 @@ int main(){
 	for(int i=0;i<n;i++){
 		scanf("%d",&ary[i]);
 	}
-	int max = 0;
+	int min;
 	for(int i=0;i<n;i++){
-		if(ary[i] > max){
-			max = ary[i];
+		if(ary[i] > 0){
+			min = ary[i];
+			break;
 		}
 	}
-	printf("So nguyen duong lon nhat la : %d",max);
+	for(int i=i+i;i<n;i++){
+		if(ary[i]>0 && ary[i]<min){
+			min = ary[i];
+		}
+	}
+	printf("So nguyen duong nho nhat la : %d",min);
 }
