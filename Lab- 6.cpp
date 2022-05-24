@@ -8,24 +8,20 @@ int main(){
 	for(int i =0;i<n;i++){
 		scanf("%d",&ary[i]);
 	}
-	int k;
-	for(int i=0;i<n;i++){
+	int count=0,max=0,i=0;
+	while(i<n){
 		if(ary[i]>0){
-			k=i;
-			break;
+			count++;
+			if(count>max){
+				max=count;
+			}
 		}
+		else{
+			count=0;
+		}
+		i++;
 	}
-	int max,x=0;
-	for(int i=k;i<n;i++){
-			if(ary[i]>0){
-			x+=1;
-				if(x>max){
-			max=x;
-		}
-		}
-		if(x>max){
-			max=x;
-		}
-	}
-		printf("  %d",max);
+	printf("So luong so duong lien tiep nhieu nhat la : %d",max);
+	return 0;
 }
+
